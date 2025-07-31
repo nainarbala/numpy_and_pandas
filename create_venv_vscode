@@ -92,3 +92,110 @@ Press Ctrl + Shift + P
 Type: Python: Select Interpreter
 
 Choose the one pointing to your myenv (.../myenv/bin/python)
+
+
+--------
+
+
+
+
+✅ 1. Check Installed Libraries
+Make sure you're inside the activated virtual environment, then run:
+
+bash
+Copy
+Edit
+pip list
+This shows all installed packages and their versions.
+
+To see more detail (like dependencies and source):
+
+bash
+Copy
+Edit
+pip show <package-name>
+Example:
+
+bash
+Copy
+Edit
+pip show numpy
+✅ 2. Install a New Dependency
+Still inside your virtual environment:
+
+bash
+Copy
+Edit
+pip install <package-name>
+Example:
+
+bash
+Copy
+Edit
+pip install pandas
+To install a specific version:
+
+bash
+Copy
+Edit
+pip install pandas==2.2.2
+✅ 3. Freeze Dependencies to a File
+To create a list of all currently installed libraries (useful for sharing or deployment):
+
+bash
+Copy
+Edit
+pip freeze > requirements.txt
+Example output in requirements.txt:
+
+ini
+Copy
+Edit
+pandas==2.2.2
+numpy==1.26.4
+✅ 4. Install from requirements.txt
+To install dependencies from a file:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+✅ 5. Uninstall a Package
+bash
+Copy
+Edit
+pip uninstall <package-name>
+Example:
+
+bash
+Copy
+Edit
+pip uninstall pandas
+✅ 6. Upgrade a Package
+bash
+Copy
+Edit
+pip install --upgrade <package-name>
+Example:
+
+bash
+Copy
+Edit
+pip install --upgrade pip
+✅ 7. Search for a Package
+bash
+Copy
+Edit
+pip search <keyword>
+Note: As of 2023+, this may not work due to PyPI's deprecation of the legacy search API. Use https://pypi.org instead.
+
+✅ Bonus: Useful PIP Commands Recap
+Command	Description
+pip list	List installed packages
+pip install <pkg>	Install a package
+pip uninstall <pkg>	Remove a package
+pip freeze > requirements.txt	Save current packages to file
+pip install -r requirements.txt	Install from a list
+pip show <pkg>	Show package details
+pip install <pkg>==<version>	Install a specific version
+pip install --upgrade <pkg>	Upgrade a package
