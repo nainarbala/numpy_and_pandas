@@ -1,0 +1,94 @@
+✅ 1. Create a Virtual Environment
+Open VS Code terminal (Ctrl + ~) and run:
+
+bash
+Copy
+Edit
+python3 -m venv venv_name
+Example:
+
+bash
+Copy
+Edit
+python3 -m venv myenv
+This creates a folder named myenv with all your virtual environment files.
+
+✅ 2. Activate the Virtual Environment
+In the terminal, activate it using:
+
+bash
+Copy
+Edit
+source myenv/bin/activate
+You’ll now see your prompt change like this:
+
+bash
+Copy
+Edit
+(myenv) user@machine:~/your/project$
+✅ 3. Check You’re Inside the Virtual Environment
+Run:
+
+bash
+Copy
+Edit
+which python
+It should point to something like:
+
+bash
+Copy
+Edit
+/home/user/project/myenv/bin/python
+Also try:
+
+bash
+Copy
+Edit
+python -V
+This confirms the Python version used inside the virtual environment.
+
+✅ 4. Deactivate the Environment
+To exit the virtual environment, simply run:
+
+bash
+Copy
+Edit
+deactivate
+Your prompt will no longer have (myenv).
+
+✅ 5. Re-enter the Same Virtual Environment Later
+Just re-run:
+
+bash
+Copy
+Edit
+source myenv/bin/activate
+And you're back in.
+
+✅ 6. Verify You’re in the Same Environment
+After re-entering:
+
+Check the prompt ((myenv) should appear)
+
+Run:
+
+bash
+Copy
+Edit
+which python
+→ It should still point to .../myenv/bin/python
+
+You can also list installed packages:
+
+bash
+Copy
+Edit
+pip list
+📌 VS Code Python Interpreter Setup
+To ensure VS Code uses your environment:
+
+Press Ctrl + Shift + P
+
+Type: Python: Select Interpreter
+
+Choose the one pointing to your myenv (.../myenv/bin/python)
